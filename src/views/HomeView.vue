@@ -18,7 +18,7 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-property-decorator';
-import zhenya from '@/assets/zhenya.jpg';
+import eugene from '@/assets/eugene.jpg';
 import andrey from '@/assets/andrey.jpg';
 
 
@@ -30,7 +30,7 @@ export default class HomeView extends Vue {
             name: 'Andrey',
         },
         {
-            pic: zhenya,
+            pic: eugene,
             name: 'Eugene',
         }
     ];
