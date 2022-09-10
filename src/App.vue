@@ -7,15 +7,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { Options, Vue } from 'vue-property-decorator';
 
-export default defineComponent({
-  name: 'App',
+@Options({})
+export default class App extends Vue {
 
-  data () {
-    return {
-      //
-    }
-  },
-})
+}
 </script>

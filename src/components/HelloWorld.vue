@@ -1,4 +1,5 @@
 <template>
+
   <v-container>
     <v-row class="text-center">
       <v-col cols="12">
@@ -97,7 +98,7 @@
 import { defineComponent } from 'vue'
 
 // Logo
-import logo from '../assets/logo.svg'
+import logo from '@/assets/logo.svg'
 
 export default defineComponent({
   name: 'HelloWorld',
