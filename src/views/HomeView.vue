@@ -3,23 +3,22 @@
         This is Andrey and Eugene's page
     </h1>
     <div class="persons">
-        <div v-for="({ pic, name }, i) in people" class="person">
+        <div v-for="({ pic, name }, index) in people" class="person">
             <h3>{{ name }}</h3>
             <img :src="pic"
                  :alt="name"
-                 :key="i"
+                 :key="index"
                  height="300"
             />
             <v-btn variant="flat" @click="sayHi(name)">Say Hi to {{ name }}</v-btn>
         </div>
-
     </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-property-decorator';
-import eugene from '@/assets/eugene.jpg';
-import andrey from '@/assets/andrey.jpg';
+import andrey from '@/assets/faces/andrey.jpg';
+import eugene from '@/assets/faces/eugene.jpg';
 
 
 @Options({})
@@ -32,10 +31,10 @@ export default class HomeView extends Vue {
         {
             pic: eugene,
             name: 'Eugene',
-        }
+        },
     ];
 
-    public sayHi(name) {
+    public sayHi(name: string) {
         this.$toast.success(`Hi ${name}`!);
     }
 }
